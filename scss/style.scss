@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: #b61984;
+    border: 1px solid #b61984;
+    border-radius: 25px 25px 25px 25px;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+        color: #b61984;
+        background-color: white;
+        border: 1px solid #b61984;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+    }
+}
+
+// Animations ------------
+
+@keyframes fadeRight {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+//  -----------------
+.header {
+    position: absolute;
+    right: 100px;
+    left: 100px;
+    z-index: 10;
+    // background-image: url('../img/yellow_top_wave_01.png');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .navbar {
+            a {
+                color: #181818;
+                font-weight: 600;
+                margin-right: 40px;
+
+                &:hover {
+                    color: #b61984;
+                }
+            }
+
+            .button {
+                background-color: #b61984;
+                border: 1px solid #b61984;
+                border-radius: 25px 25px 25px 25px;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+
+                &:hover {
+                    color: #b61984;
+                    background-color: white;
+                    border: 1px solid #b61984;
+                    transition: all 0.5s ease-out;
+                }
+            }
+
+            .icon {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.about {
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/Violet_top_left_wave.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+
+    img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .about-left {
+            animation: fadeRight 1s;
+
+            h5 {
+                color: #b61984;
+                font-size: 16.5px;
+                font-weight: 600;
+            }
+
+            h1 {
+                color: #191919;
+                font-weight: 700;
+                font-size: 57px;
+            }
+        }
+
+        .about-right {
+            animation: appear 2s;
+        }
+    }
+}
+
+.teachers {
+    background-color: #dcd1f0;
+    background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+
+    .container {
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .col-3 {
+                width: calc(25%);
+
+                // background-color: #dcd1f0;
+                .cardContainer {
+                    padding: 0 20px 20px 20px;
+
+                    .card {
+                        width: 100%;
+                        // padding: 20px;
+                        margin-bottom: 15px;
+
+                        &:hover {
+                            box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+                            -webkit-box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+                            -moz-box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+                            border-radius: 10px;
+                            transition: 0.5s;
+                        }
+
+                        .card-pic {
+                            background-color: white;
+                            border-radius: 10px 10px 0 0;
+
+                            img {
+                                width: 100%;
+                                border-radius: 10px 10px 0 0;
+                            }
+                        }
+
+                        .card-des {
+                            background-color: white;
+                            text-align: center;
+                            padding: 15px;
+                            border-radius: 0 0 10px 10px;
+
+
+                            h5 {
+                                margin-bottom: 5px;
+                                color: #b61984;
+                                font-size: 11.5px;
+                            }
+
+                            b {
+                                display: block;
+                                margin-bottom: 10px;
+                                color: #191919;
+                                font-size: 23.25px;
+                            }
+
+                            p {
+                                color: #181818;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .a1 {
+                    animation: appear 0.5s;
+                }
+
+                .a2 {
+                    animation: appear 1.5s;
+                }
+
+                .a3 {
+                    animation: appear 2.5s;
+                }
+
+                .a4 {
+                    animation: appear 3.5s;
+                }
+            }
+        }
+    }
+}
+
+.registration {
+    padding-top: 50px;
+    background-image: url(../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+
+    .container {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .col-left {
+                width: calc(50%);
+                text-align: center;
+                animation: fadeRight 1s;
+
+                img {
+                    width: 526px;
+                    height: 526px;
+                }
+            }
+
+            .col-right {
+                width: calc(50%);
+                animation: appear 2s;
+
+                .form {
+                    width: 80%;
+                    height: 95%;
+                    padding: 0 36px;
+                    text-align: center;
+                    background-color: white;
+                    -webkit-box-shadow: 0px 0px 11px -5px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0px 0px 11px -5px rgba(0, 0, 0, 0.4);
+                    border-radius: 15px 15px 15px 15px;
+
+                    span {
+                        font-size: 37.5px;
+                        color: #191919;
+                        font-weight: bold;
+                        padding: 30px 0;
+                        display: block;
+                    }
+
+                    .input {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 17.5px;
+
+                        input {
+                            width: 45%;
+                            padding: 10px 5px 10px 17.5px;
+                            border-radius: 20px 20px 20px 20px;
+                            border: 1px solid #e6e6e6;
+                        }
+                    }
+
+                    .selectdiv {
+                        padding-bottom: 17.5px;
+
+
+                        select {
+                            width: 100%;
+                            padding: 10px 5px 10px 17.5px;
+                            border-radius: 20px 20px 20px 20px;
+                            border: 1px solid #e6e6e6;
+                        }
+                    }
+
+                    textarea {
+                        display: block;
+                        width: 100%;
+                        padding: 5px 5px 5px 17.5px;
+                        border-radius: 20px 20px 20px 20px;
+                        border: 1px solid #e6e6e6;
+                    }
+
+                    .divbutton {
+                        padding: 30px 0 20px 0;
+                        margin-bottom: 10px;
+                        text-align: left;
+
+                        .button {
+                            padding-left: 50px;
+                            padding-right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #aa017e;
+    background-image: url(../img/footer_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+
+    height: 500px;
+
+    .container {
+        color: white;
+        position: relative;
+        top: 25%;
+        bottom: 50%;
+
+        a {
+            color: white;
+        }
+
+        .footer-content {
+            .a1 {
+                animation: appear 0.5s;
+            }
+
+            .a2 {
+                animation: appear 1.5s;
+            }
+
+            .a3 {
+                animation: appear 2.5s;
+            }
+
+            .a4 {
+                animation: appear 3.5s;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+
+                .col-3 {
+                    width: calc(25%);
+
+                    b {
+                        display: block;
+                        margin-bottom: 25px;
+                        font-size: 23.25px;
+                    }
+
+                    p {
+                        font-size: 13.5px;
+                        margin: 0 0 15px 0;
+                    }
+
+                    .icons {
+                        a {
+                            margin: 0 10px 0 0;
+
+                            &:hover {
+                                color: #191919;
+                                transition: 0.25s;
+                            }
+                        }
+                    }
+
+                    .inputHolder {
+                        margin-bottom: 15px;
+
+                        input {
+                            padding: 15px 38px 15px 38px;
+                            text-align: center;
+                            border-radius: 50px;
+                            border: 1px solid #be2195;
+                            background-color: #aa017e;
+                            color: white;
+
+                            &:hover {
+                                border: 1px solid white;
+                            }
+
+                            &::placeholder {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .buttonHolder {
+                        .button {
+                            background-color: white;
+                            color: #181818;
+                            border: 1px solid white;
+                            border-radius: 50px;
+                            padding-left: 75px;
+                            padding-right: 75px;
+
+                            &:hover {
+                                background-color: #aa017e;
+                                color: white;
+                                transition: 0.5s
+                            }
+
+                            ;
+                        }
+                    }
+                }
+
+                .aFooter {
+                    a {
+                        display: block;
+                        margin: 0 0 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}

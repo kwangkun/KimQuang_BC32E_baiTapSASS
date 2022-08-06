@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: #b61984;
+  border: 1px solid #b61984;
+  border-radius: 25px 25px 25px 25px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.button:hover {
+  color: #b61984;
+  background-color: white;
+  border: 1px solid #b61984;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header {
+  position: absolute;
+  right: 100px;
+  left: 100px;
+  z-index: 10;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .logo img {
+  width: 80px;
+  height: 80px;
+}
+.header .container .navbar a {
+  color: #181818;
+  font-weight: 600;
+  margin-right: 40px;
+}
+.header .container .navbar a:hover {
+  color: #b61984;
+}
+.header .container .navbar .button {
+  background-color: #b61984;
+  border: 1px solid #b61984;
+  border-radius: 25px 25px 25px 25px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.header .container .navbar .button:hover {
+  color: #b61984;
+  background-color: white;
+  border: 1px solid #b61984;
+  transition: all 0.5s ease-out;
+}
+.header .container .navbar .icon {
+  margin-right: 10px;
+}
+
+.about {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/Violet_top_left_wave.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+.about img {
+  width: 100%;
+  height: 50%;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .container .about-left {
+  animation: fadeRight 1s;
+}
+.about .container .about-left h5 {
+  color: #b61984;
+  font-size: 16.5px;
+  font-weight: 600;
+}
+.about .container .about-left h1 {
+  color: #191919;
+  font-weight: 700;
+  font-size: 57px;
+}
+.about .container .about-right {
+  animation: appear 2s;
+}
+
+.teachers {
+  background-color: #dcd1f0;
+  background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+}
+.teachers .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.teachers .container .row .col-3 {
+  width: 25%;
+}
+.teachers .container .row .col-3 .cardContainer {
+  padding: 0 20px 20px 20px;
+}
+.teachers .container .row .col-3 .cardContainer .card {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.teachers .container .row .col-3 .cardContainer .card:hover {
+  box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 8px 9px 58px -22px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-pic {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-pic img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-des {
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-des h5 {
+  margin-bottom: 5px;
+  color: #b61984;
+  font-size: 11.5px;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-des b {
+  display: block;
+  margin-bottom: 10px;
+  color: #191919;
+  font-size: 23.25px;
+}
+.teachers .container .row .col-3 .cardContainer .card .card-des p {
+  color: #181818;
+  font-size: 15px;
+}
+.teachers .container .row .col-3 .a1 {
+  animation: appear 0.5s;
+}
+.teachers .container .row .col-3 .a2 {
+  animation: appear 1.5s;
+}
+.teachers .container .row .col-3 .a3 {
+  animation: appear 2.5s;
+}
+.teachers .container .row .col-3 .a4 {
+  animation: appear 3.5s;
+}
+
+.registration {
+  padding-top: 50px;
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+}
+.registration .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.registration .container .row .col-left {
+  width: 50%;
+  text-align: center;
+  animation: fadeRight 1s;
+}
+.registration .container .row .col-left img {
+  width: 526px;
+  height: 526px;
+}
+.registration .container .row .col-right {
+  width: 50%;
+  animation: appear 2s;
+}
+.registration .container .row .col-right .form {
+  width: 80%;
+  height: 95%;
+  padding: 0 36px;
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 11px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 11px -5px rgba(0, 0, 0, 0.4);
+  border-radius: 15px 15px 15px 15px;
+}
+.registration .container .row .col-right .form span {
+  font-size: 37.5px;
+  color: #191919;
+  font-weight: bold;
+  padding: 30px 0;
+  display: block;
+}
+.registration .container .row .col-right .form .input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 17.5px;
+}
+.registration .container .row .col-right .form .input input {
+  width: 45%;
+  padding: 10px 5px 10px 17.5px;
+  border-radius: 20px 20px 20px 20px;
+  border: 1px solid #e6e6e6;
+}
+.registration .container .row .col-right .form .selectdiv {
+  padding-bottom: 17.5px;
+}
+.registration .container .row .col-right .form .selectdiv select {
+  width: 100%;
+  padding: 10px 5px 10px 17.5px;
+  border-radius: 20px 20px 20px 20px;
+  border: 1px solid #e6e6e6;
+}
+.registration .container .row .col-right .form textarea {
+  display: block;
+  width: 100%;
+  padding: 5px 5px 5px 17.5px;
+  border-radius: 20px 20px 20px 20px;
+  border: 1px solid #e6e6e6;
+}
+.registration .container .row .col-right .form .divbutton {
+  padding: 30px 0 20px 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.registration .container .row .col-right .form .divbutton .button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer {
+  background-color: #aa017e;
+  background-image: url(../img/footer_background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+  height: 500px;
+}
+.footer .container {
+  color: white;
+  position: relative;
+  top: 25%;
+  bottom: 50%;
+}
+.footer .container a {
+  color: white;
+}
+.footer .container .footer-content .a1 {
+  animation: appear 0.5s;
+}
+.footer .container .footer-content .a2 {
+  animation: appear 1.5s;
+}
+.footer .container .footer-content .a3 {
+  animation: appear 2.5s;
+}
+.footer .container .footer-content .a4 {
+  animation: appear 3.5s;
+}
+.footer .container .footer-content .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .container .footer-content .row .col-3 {
+  width: 25%;
+}
+.footer .container .footer-content .row .col-3 b {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 23.25px;
+}
+.footer .container .footer-content .row .col-3 p {
+  font-size: 13.5px;
+  margin: 0 0 15px 0;
+}
+.footer .container .footer-content .row .col-3 .icons a {
+  margin: 0 10px 0 0;
+}
+.footer .container .footer-content .row .col-3 .icons a:hover {
+  color: #191919;
+  transition: 0.25s;
+}
+.footer .container .footer-content .row .col-3 .inputHolder {
+  margin-bottom: 15px;
+}
+.footer .container .footer-content .row .col-3 .inputHolder input {
+  padding: 15px 38px 15px 38px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid #be2195;
+  background-color: #aa017e;
+  color: white;
+}
+.footer .container .footer-content .row .col-3 .inputHolder input:hover {
+  border: 1px solid white;
+}
+.footer .container .footer-content .row .col-3 .inputHolder input::placeholder {
+  color: white;
+}
+.footer .container .footer-content .row .col-3 .buttonHolder .button {
+  background-color: white;
+  color: #181818;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.footer .container .footer-content .row .col-3 .buttonHolder .button:hover {
+  background-color: #aa017e;
+  color: white;
+  transition: 0.5s;
+}
+.footer .container .footer-content .row .aFooter a {
+  display: block;
+  margin: 0 0 20px 0;
+}
